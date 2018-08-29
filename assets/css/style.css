@@ -1,0 +1,9 @@
+.jumbotron {
+    background-color: rgb(10, 10, 66);
+    color: white;
+    text-align: center;
+    }
+    
+    .card {
+        margin-bottom: 10px
+    }

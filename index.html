@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New York Times Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<div class="container col-sm-8">
+    <div class="jumbotron">
+        <h1 class="display-4"><i class="fa fa-newspaper-o" style="font-size:48px;color:white"></i> New York Times Search</h1>
+        <!-- <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> -->
+    </div>
+    <!--card to hold search parameters  -->
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-tasks"></i> Search Parameters
+        </div>
+
+        <div class="card-body">
+            <form>
+                <div class="form-group">
+                    <label for="nytSearchTerm">Search Term:</label>
+                    <input type="text" class="form-control" id="searchTerm">
+                </div>
+
+                <div class="form-group">
+                    <label for="nytNumberRetrieve">Number of Records to Retrieve</label>
+                    <select class="form-control" id="numberToRetrieve">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nytStartYear">Start Year (Optional)</label>
+                    <input type="text" class="form-control" id="startYear" placeholder="e.g 1990">
+                </div>
+
+                <div class="form-group">
+                    <label for="nytEndYear">End Year (Optional)</label>
+                    <input type="text" class="form-control" id="endYear" placeholder="e.g. 2018">
+                </div>
+
+                <button type="submit" class="btn btn-light mb-2" id="searchButton"><i class="fa fa-search"></i> Search</button>
+                <button type="submit" class="btn btn-light mb-2" id="resetButton"><i class="fa fa-times-circle-o"></i> Clear Search</button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- card to hold results -->
+    <div class="card">
+        <div class="card-header">
+            <i class="fa fa-tasks"></i> Top Articles
+        </div>
+
+        <div class="card-body">
+            <div id="articleResults">
+            </div>
+
+            <button type="submit" class="btn btn-light mb-2" id="clearResults"><i class="fa fa-times-circle-o"></i> Clear Articles</button>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="./logic.js"></script>
+    
+</body>
+</html>
